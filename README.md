@@ -1,3 +1,13 @@
 # AKASH DANGE MULTI SERVICE CENTRE
 
-This repository contains the website app for the AKASH DANGE MULTI SERVICE CENTRE service platform.
+हे स्टार्टिंग प्रोजेक्ट आहे ज्यात एक साधी रेस्पॉन्सिव्ह साइट आणि १-१५० पर्यंतच्या मराठी सेवा यादीचा JSON फाइल आहे.
+
+कसे वापरावे:
+- वेबसाइट पाहण्यासाठी `index.html` उघडा (GitHub Pages वर deploy केल्यानंतर तो https://<username>.github.io/ असेल).
+- बुकिंग (डेमो): फॉर्म सबमिट केल्यावर डेटा ब्राउझरच्या लोकलस्टोरेजमध्ये सेव्ह होतो. अॅडमिन पाहण्यासाठी URL मध्ये `?admin=1` जोडा.
+
+पुढील टप्पे (तुम्हाला हवे असल्यास मी करेन):
+- Firebase/Backend जोडून बूकिंग्स सर्व्हरवर सेव्ह करणे
+- लॉगिन-सुरक्षित अॅडमिन पॅनेल
+- UI सुधारणा आणि लोगो/रंगसंगती समाविष्ट करणे
+

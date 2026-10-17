@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>आकाश डांगे मल्टी सर्व्हिसेस सेंटर</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>आकाश डांगे मल्टी सर्व्हिसेस सेंटर</h1>
+      <nav>
+        <a href="#home">मुख्यपृष्ठ</a>
+        <a href="#services">सेवा</a>
+        <a href="#book">बुकिंग</a>
+        <a href="#contact">संपर्क</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <h2>आपली सर्व प्रकारची सेवा एका ठिकाणी</h2>
+      <p>गृहसेवा, सरकारी फॉर्म, बँकिंग, डॉक्युमेंट्स आणि बरेच काही — विश्वासार्ह आणि वेगवान सेवा.</p>
+      <div class="cta">
+        <a href="#book" class="btn">आता बुक करा</a>
+        <a href="#contact" class="btn btn-secondary">संवाद करा</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>उपलब्ध सेवा</h2>
+      <p>खालील १ ते १५० पर्यंत सर्व सेवा दिल्या आहेत. शोधा आणि बुक करा.</p>
+      <input id="search" type="search" placeholder="सेवा शोधा..." />
+      <ul id="services-list" class="services-list"></ul>
+    </section>
+
+    <section id="book">
+      <h2>बुकिंग फॉर्म</h2>
+      <form id="booking-form">
+        <label>नाव
+          <input type="text" id="customer_name" required>
+        </label>
+        <label>फोन नंबर
+          <input type="tel" id="phone" required>
+        </label>
+        <label>ईमेल (ऐच्छिक)
+          <input type="email" id="email">
+        </label>
+        <label>सेवा
+          <select id="service_select" required>
+            <option value="">-- सेवा निवडा --</option>
+          </select>
+        </label>
+        <label>प्राधान्य दिन
+          <input type="date" id="preferred_date">
+        </label>
+        <label>प्राधान्य वेळ
+          <input type="time" id="preferred_time">
+        </label>
+        <label>टीप / अतिरिक्त माहिती
+          <textarea id="notes"></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">सबमिट करा</button>
+          <button type="reset" class="btn btn-secondary">रीसेट</button>
+        </div>
+      </form>
+      <p class="note">(डेमो: बुकिंग ब्राउझरच्या लोकलस्टोरेजवर सेव्ह होईल. ऍडमिन पाहण्यासाठी URL मध्ये ?admin=1 जोडा)</p>
+    </section>
+
+    <section id="contact">
+      <h2>संपर्क करा</h2>
+      <p>फोन: <a href="tel:+919999999999">+91 99999 99999</a></p>
+      <p>पत्ता: तुमचा पत्ता येथे टाका</p>
+      <p>वेळ: सोमवार - शनिवार, 9:00 AM - 7:00 PM</p>
+    </section>
+
+    <section id="admin" style="display:none;">
+      <h2>अॅडमिन - बुकिंग्स</h2>
+      <div id="bookings-table"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 आकाश डांगे मल्टी सर्व्हिसेस सेंटर</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
