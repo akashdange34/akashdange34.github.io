@@ -4,65 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AKASH DANGE MULTI SERVICE CENTRE</title>
-    <meta
-      name="description"
-      content="AKASH DANGE MULTI SERVICE CENTRE — सर्व सरकारी आणि खाजगी सेवा, फॉर्म, नोंदणी, आधार, पॅन, रेशन, उठारा, पासपोर्ट, ड्राइव्हिंग लायसन्स, कागदपत्र, बिल भरणे आणि इतर सर्व सेवा."
-    />
+    <meta name="description" content="AKASH DANGE MULTI SERVICE CENTRE — आधार, पॅन, रेशन, प्रमाणपत्र, फॉर्म, नोंदणी, बिल भरणा आणि विविध सरकारी सेवा." />
     <style>
       :root {
-        --primary: #0b3d91;
-        --primary-dark: #072d66;
+        --primary: #1d4ed8;
+        --primary-dark: #0f172a;
+        --primary-soft: #e0ebff;
         --accent: #f59e0b;
-        --accent-soft: #fff3d6;
+        --accent-soft: #fff2cc;
         --bg: #f4f7fb;
         --card: #ffffff;
-        --muted: #4b5563;
         --text: #111827;
-        --success: #12b981;
-        --shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+        --muted: #475569;
+        --success: #16a34a;
+        --shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
       }
 
       * { box-sizing: border-box; }
-
       html { scroll-behavior: smooth; }
-
       body {
         margin: 0;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(180deg, #eef5ff 0%, #f7f9fc 100%);
+        background: linear-gradient(180deg, #eef5ff 0%, #f8fafc 100%);
         color: var(--text);
       }
-
       a { text-decoration: none; }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
+      img { max-width: 100%; display: block; }
+      .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
 
       .topbar {
         background: var(--primary-dark);
-        color: #fff;
-        padding: 12px 0;
-        font-size: 0.96rem;
+        color: white;
+        padding: 14px 0;
       }
-
-      .topbar .container {
+      .topbar .inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 12px;
+        gap: 16px;
         flex-wrap: wrap;
       }
-
       .brand {
         display: flex;
         align-items: center;
         gap: 14px;
       }
-
-      .brand-badge {
+      .badge {
         width: 52px;
         height: 52px;
         border-radius: 14px;
@@ -73,286 +60,275 @@
         font-weight: 800;
         box-shadow: var(--shadow);
       }
-
       .brand h1 {
+        font-size: clamp(1rem, 2vw, 1.6rem);
         margin: 0;
-        font-size: clamp(1.2rem, 2vw, 2rem);
       }
-
       .nav {
         display: flex;
-        gap: 18px;
+        gap: 22px;
         flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
       }
-
       .nav a {
-        color: rgba(255,255,255,0.88);
+        color: rgba(255,255,255,0.9);
         font-weight: 600;
       }
 
       .hero {
-        background: radial-gradient(circle at top left, rgba(14, 116, 144, 0.12), transparent 26%),
-                    linear-gradient(125deg, rgba(11,61,145,0.08), rgba(245,158,11,0.12));
-        padding: 72px 0 50px;
+        padding: 78px 0 54px;
+        background: radial-gradient(circle at top left, rgba(29,78,216,.12), transparent 30%),
+                    linear-gradient(135deg, rgba(14,116,144,.08), rgba(245,158,11,.08));
       }
-
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 32px;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 30px;
         align-items: center;
       }
-
       .eyebrow {
         display: inline-block;
-        background: rgba(11,61,145,0.08);
+        background: var(--primary-soft);
         color: var(--primary);
         padding: 8px 12px;
         border-radius: 999px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
+        font-size: 0.78rem;
+        font-weight: 800;
         text-transform: uppercase;
+        letter-spacing: 0.08em;
       }
-
       h2 {
-        font-size: clamp(2rem, 4vw, 4rem);
-        line-height: 1.08;
-        margin: 18px 0 18px;
+        margin: 18px 0 16px;
+        font-size: clamp(2.2rem, 4vw, 4rem);
+        line-height: 1.1;
       }
-
       .hero p {
-        font-size: 1.08rem;
         color: var(--muted);
-        line-height: 1.7;
-        max-width: 660px;
+        font-size: 1.08rem;
+        line-height: 1.8;
+        margin: 0;
       }
-
       .cta-row {
         display: flex;
         flex-wrap: wrap;
         gap: 14px;
-        margin-top: 28px;
+        margin-top: 26px;
       }
-
       .btn {
         display: inline-flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        padding: 14px 22px;
         border-radius: 12px;
-        padding: 14px 20px;
         font-weight: 700;
         transition: 0.2s ease;
       }
-
+      .btn:hover { transform: translateY(-1px); }
       .btn.primary {
         background: var(--primary);
         color: white;
         box-shadow: var(--shadow);
       }
-
       .btn.secondary {
         background: var(--accent-soft);
         color: var(--primary);
-        border: 1px solid rgba(11,61,145,0.1);
+        border: 1px solid rgba(29,78,216,0.12);
       }
-
-      .btn:hover {
-        transform: translateY(-1px);
-      }
-
       .hero-card {
         background: var(--card);
-        border-radius: 22px;
+        border-radius: 24px;
         box-shadow: var(--shadow);
         padding: 26px;
-        border: 1px solid rgba(15,23,42,0.04);
+        border: 1px solid rgba(15,23,42,0.05);
       }
-
-      .mini-metrics {
+      .hero-card h3 {
+        margin: 0 0 20px;
+        font-size: 1.6rem;
+      }
+      .mini-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(120px, 1fr));
-        gap: 16px;
-        margin-top: 18px;
+        gap: 18px;
       }
-
-      .metric {
+      .mini-item {
         background: var(--bg);
         border-radius: 16px;
-        padding: 16px 14px;
+        padding: 18px 14px;
+        text-align: center;
       }
-
-      .metric strong {
+      .mini-item strong {
         display: block;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         color: var(--primary);
       }
-
-      .metric span {
+      .mini-item span {
         color: var(--muted);
-        font-size: 0.95rem;
+        font-size: 0.92rem;
       }
 
       section {
-        padding: 60px 0;
+        padding: 66px 0;
       }
-
-      .section-head {
-        margin-bottom: 28px;
-      }
-
+      .section-head { margin-bottom: 26px; }
       .section-head small {
         color: var(--primary);
-        font-weight: 700;
+        font-size: 0.8rem;
+        font-weight: 800;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
-
       .section-head h3 {
-        font-size: clamp(1.8rem, 3vw, 3rem);
         margin: 10px 0 0;
+        font-size: clamp(1.8rem, 3vw, 3rem);
       }
 
-      .cards {
+      .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 22px;
       }
-
       .card {
         background: var(--card);
         border-radius: 18px;
         padding: 24px 20px;
-        box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
         border: 1px solid rgba(15,23,42,0.04);
       }
-
-      .card .icon {
+      .icon {
         width: 54px;
         height: 54px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #dbeafe, #fef3c7);
         display: grid;
         place-items: center;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #dbeafe, #fef3c7);
-        color: var(--primary);
-        font-size: 1.4rem;
         font-weight: 800;
+        color: var(--primary);
         margin-bottom: 18px;
       }
-
       .card h4 {
         margin: 0 0 10px;
-        font-size: 1.17rem;
+        font-size: 1.15rem;
       }
-
       .card p {
         margin: 0;
         color: var(--muted);
         line-height: 1.7;
       }
 
-      .service-list {
+      .service-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 16px;
       }
-
       .service-item {
-        background: white;
-        border-radius: 14px;
-        padding: 18px 18px;
-        border: 1px solid rgba(15,23,42,0.06);
-        color: var(--text);
         display: flex;
         align-items: center;
-        gap: 12px;
-        box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+        gap: 14px;
+        background: white;
+        border: 1px solid rgba(15,23,42,0.06);
+        border-radius: 14px;
+        padding: 18px 16px;
+        box-shadow: 0 10px 20px rgba(15, 23, 42, 0.03);
       }
-
-      .service-item .num {
-        min-width: 36px;
-        height: 36px;
+      .service-num {
+        min-width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
         border-radius: 10px;
         background: var(--primary);
         color: white;
-        display: grid;
-        place-items: center;
-        font-size: 0.85rem;
-        font-weight: 700;
+        font-size: 0.82rem;
+        font-weight: 800;
       }
-
       .service-item span {
-        line-height: 1.5;
         font-weight: 600;
+        line-height: 1.5;
       }
 
       .cta-box {
-        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary));
         color: white;
-        border-radius: 26px;
+        border-radius: 24px;
         padding: 36px 28px;
         box-shadow: var(--shadow);
       }
-
       .cta-box .inner {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        gap: 16px;
+        gap: 18px;
+        flex-wrap: wrap;
       }
-
+      .cta-box h3 {
+        margin: 0 0 8px;
+        font-size: clamp(1.5rem, 2vw, 2.3rem);
+      }
       .cta-box p {
         margin: 0;
-        opacity: 0.9;
+        color: rgba(255,255,255,0.88);
         line-height: 1.7;
+      }
+
+      .contact-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 18px;
+      }
+      .contact-item {
+        background: white;
+        border: 1px solid rgba(15,23,42,0.05);
+        border-radius: 18px;
+        padding: 20px 18px;
+        box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+      }
+      .contact-item strong {
+        display: block;
+        color: var(--primary);
+        margin-bottom: 8px;
+      }
+      .contact-item p {
+        margin: 0;
+        line-height: 1.7;
+        color: var(--muted);
       }
 
       footer {
         background: #0b1220;
-        color: rgba(255,255,255,0.88);
-        padding: 28px 0;
+        color: rgba(255,255,255,0.9);
+        padding: 26px 0;
       }
-
       .footer-row {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         gap: 12px;
         flex-wrap: wrap;
+        align-items: center;
       }
 
       @media (max-width: 900px) {
         .hero-grid { grid-template-columns: 1fr; }
       }
-
       @media (max-width: 600px) {
-        .topbar .container, .footer-row, .cta-box .inner {
+        .nav, .footer-row, .cta-box .inner {
           justify-content: center;
           text-align: center;
         }
-
         .brand {
+          width: 100%;
           justify-content: center;
-          width: 100%;
-        }
-
-        .nav {
-          width: 100%;
         }
       }
     </style>
   </head>
   <body>
     <div class="topbar">
-      <div class="container">
+      <div class="container inner">
         <div class="brand">
-          <div class="brand-badge">A</div>
+          <div class="badge">A</div>
           <h1>AKASH DANGE MULTI SERVICE CENTRE</h1>
         </div>
-        <nav class="nav" aria-label="Main Navigation">
+        <nav class="nav" aria-label="Main navigation">
           <a href="#about">आमच्याबद्दल</a>
           <a href="#services">सेवा</a>
           <a href="#contact">संपर्क</a>
@@ -363,12 +339,13 @@
     <header class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Trusted Multi Service Support</span>
+          <span class="eyebrow">Digital Service Support</span>
           <h2>सर्व सरकारी आणि खाजगी सेवा एकाच ठिकाणी</h2>
           <p>
-            आधार, पॅन, रेशन, दुरुस्ती, फॉर्म भरणे, नोंदणी, प्रमाणपत्र, आरोग्य सेवा,
-            बिल भरणा, तिकीट बुकिंग आणि विविध ऑनलाइन सेवा आपल्या संरक्षणात उपलब्ध आहेत.
+            आधार, पॅन, रेशन, प्रमाणपत्र, आरोग्य, बँकिंग, फॉर्म भरणे, नोंदणी,
+            बिल भरणे, तिकीट बुकिंग आणि विविध ऑनलाइन सेवा सुलभ आणि जलद पद्धतीने उपलब्ध.
           </p>
+
           <div class="cta-row">
             <a class="btn primary" href="services.md">सर्व सेवा पाहा</a>
             <a class="btn secondary" href="#contact">संपर्क करा</a>
@@ -376,23 +353,23 @@
         </div>
 
         <div class="hero-card">
-          <h3 style="margin-top: 0;">कमी वेळात सेवा</h3>
-          <div class="mini-metrics">
-            <div class="metric">
+          <h3>कमी वेळेत सेवा</h3>
+          <div class="mini-grid">
+            <div class="mini-item">
               <strong>150+</strong>
               <span>सेवा</span>
             </div>
-            <div class="metric">
-              <strong>24/7</strong>
-              <span>सपोर्ट</span>
-            </div>
-            <div class="metric">
-              <strong>Fast</strong>
+            <div class="mini-item">
+              <strong>Quick</strong>
               <span>प्रक्रिया</span>
             </div>
-            <div class="metric">
-              <strong>Easy</strong>
-              <span>फॉर्म भरणा</span>
+            <div class="mini-item">
+              <strong>Fast</strong>
+              <span>सहाय्य</span>
+            </div>
+            <div class="mini-item">
+              <strong>Trust</strong>
+              <span>विश्वास</span>
             </div>
           </div>
         </div>
@@ -407,23 +384,23 @@
             <h3>AKASH DANGE MULTI SERVICE CENTRE</h3>
           </div>
 
-          <div class="cards">
+          <div class="card-grid">
             <article class="card">
               <div class="icon">✓</div>
               <h4>सर्व प्रकारची सेवा</h4>
-              <p>आधार, पॅन, रेशन, प्रमाणपत्र, आरोग्य, शिक्षण, रोजगार, बँकिंग आणि सरकारी फॉर्म सेवा सुलभतेने.</p>
+              <p>आधार, पॅन, रेशन, सरकारच्या फॉर्म, प्रमाणपत्र, बँकिंग, बिल भरणे आणि विविध ऑनलाइन सेवा.</p>
             </article>
 
             <article class="card">
               <div class="icon">⚡</div>
-              <h4>जलद प्रक्रिया</h4>
-              <p>तुमच्या आवश्यक कागदपत्रांसह योग्य मार्गदर्शन, वेळेची बचत आणि अचूकता देऊन सेवा उपलब्ध करून देतो.</p>
+              <h4>जलद आणि अचूक</h4>
+              <p>तुमची माहिती, कागदपत्रे आणि प्रक्रिया तपासून योग्य मार्गदर्शन देऊन वेळ वाचवतो.</p>
             </article>
 
             <article class="card">
               <div class="icon">📋</div>
-              <h4>शिकायत / सुधारणा सेवा</h4>
-              <p>एखादा फॉर्म, दुरुस्ती किंवा नोंदणी करताना तांत्रिक अडचणी असल्यास योग्य मार्गदर्शन दिले जाते.</p>
+              <h4>सहाय्य आणि दुरुस्ती</h4>
+              <p>फॉर्म भरणे, दुरुस्ती, नोंदणी किंवा नोंदणी प्रक्रियेत अडचणी असल्यास योग्य मार्गदर्शन.</p>
             </article>
           </div>
         </div>
@@ -436,17 +413,17 @@
             <h3>मुख्य सेवा</h3>
           </div>
 
-          <div class="service-list">
-            <div class="service-item"><div class="num">1</div><span>आधार कार्ड सेवा</span></div>
-            <div class="service-item"><div class="num">2</div><span>पॅन कार्ड सेवा</span></div>
-            <div class="service-item"><div class="num">3</div><span>रेशन कार्ड सेवा</span></div>
-            <div class="service-item"><div class="num">4</div><span>प्रमाणपत्र सेवा</span></div>
-            <div class="service-item"><div class="num">5</div><span>बँकिंग सेवा</span></div>
-            <div class="service-item"><div class="num">6</div><span>जॉब आणि भरती अर्ज</span></div>
-            <div class="service-item"><div class="num">7</div><span>पासपोर्ट / ड्रायव्हिंग लायसन्स</span></div>
-            <div class="service-item"><div class="num">8</div><span>GST / MSME / कंपनी नोंदणी</span></div>
-            <div class="service-item"><div class="num">9</div><span>बिल भरणे / रिचार्ज</span></div>
-            <div class="service-item"><div class="num">10</div><span>कागदपत्र प्रिंट / स्कॅन / लॅमिनेशन</span></div>
+          <div class="service-grid">
+            <div class="service-item"><div class="service-num">1</div><span>आधार कार्ड सेवा</span></div>
+            <div class="service-item"><div class="service-num">2</div><span>पॅन कार्ड सेवा</span></div>
+            <div class="service-item"><div class="service-num">3</div><span>रेशन कार्ड सेवा</span></div>
+            <div class="service-item"><div class="service-num">4</div><span>प्रमाणपत्र सेवा</span></div>
+            <div class="service-item"><div class="service-num">5</div><span>बँकिंग सेवा</span></div>
+            <div class="service-item"><div class="service-num">6</div><span>भरती व अर्ज सेवा</span></div>
+            <div class="service-item"><div class="service-num">7</div><span>पासपोर्ट व ड्रायव्हिंग लाइसन्स</span></div>
+            <div class="service-item"><div class="service-num">8</div><span>GST / MSME / कंपनी नोंदणी</span></div>
+            <div class="service-item"><div class="service-num">9</div><span>बिल भरणे / रिचार्ज</span></div>
+            <div class="service-item"><div class="service-num">10</div><span>प्रिंट / स्कॅन / लॅमिनेशन</span></div>
           </div>
         </div>
       </section>
@@ -456,23 +433,49 @@
           <div class="cta-box">
             <div class="inner">
               <div>
-                <h3 style="margin: 0 0 12px; font-size: clamp(1.4rem, 2vw, 2.2rem);">सर्व सेवा यादी पाहण्यासाठी क्लिक करा</h3>
-                <p>आधार, पॅन, सरकारी फॉर्म, बँकिंग, शासकीय योजना, आरोग्य सेवा आणि इतर 150+ सेवा यादी येथे उपलब्ध आहे.</p>
+                <h3>सर्व सेवा यादी पाहण्यासाठी येथे क्लिक करा</h3>
+                <p>आधार, पॅन, सरकारचे फॉर्म, आरोग्य सेवा, योजना, बिल भरणे आणि 150+ सेवा यादी येथे उपलब्ध आहे.</p>
               </div>
-              <a class="btn secondary" href="services.md">See Full List</a>
+              <a href="services.md" class="btn secondary">सर्व सेवा पाहा</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="section-head">
+            <small>Contact</small>
+            <h3>संपर्क आणि माहिती</h3>
+          </div>
+
+          <div class="contact-box">
+            <div class="contact-item">
+              <strong>कार्यक्षेत्र</strong>
+              <p>सर्व सरकारी आणि खाजगी सेवा, फॉर्म भरणे, प्रमाणपत्र, नोंदणी आणि दुरुस्ती सेवा.</p>
+            </div>
+
+            <div class="contact-item">
+              <strong>सपोर्ट</strong>
+              <p>तुमची सेवा, अर्ज, कागदपत्रे आणि प्रक्रिया याबद्दल योग्य मार्गदर्शन उपलब्ध.</p>
+            </div>
+
+            <div class="contact-item">
+              <strong>सामान्य सूचना</strong>
+              <p>कृपया सेवा आणि कागदपत्रांची तपशील माहिती सोबत ठेवून येणे लाभदायक ठरेल.</p>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer id="contact">
+    <footer>
       <div class="container footer-row">
         <div>
           <strong>AKASH DANGE MULTI SERVICE CENTRE</strong><br />
           सर्व सरकारी आणि खाजगी सेवा सहाय्य
         </div>
-        <div>Contact for appointment / consultation</div>
+        <div>Website by GitHub Pages</div>
       </div>
     </footer>
   </body>
