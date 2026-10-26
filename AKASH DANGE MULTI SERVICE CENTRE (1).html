@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AKASH DANGE MULTI SERVICE CENTRE - Digital, Government, Travel, Printing and Online Services.">
+<title>AKASH DANGE MULTI SERVICE CENTRE</title>
+<style>
+:root{--gold:#d8a63c;--gold2:#ffd76a;--dark:#090b10;--card:#121620;--text:#f7f7f7;--muted:#aeb5c2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#080a0e,#10131a);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(7,9,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid #292d35}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:.5px}.logo span{color:var(--gold2)}
+nav{display:flex;gap:24px}nav a{color:#ddd;font-size:14px}nav a:hover{color:var(--gold2)}
+.menu{display:none;background:none;border:0;color:white;font-size:28px}
+.lang{background:none;border:1px solid var(--gold);color:var(--gold2);padding:6px 12px;border-radius:8px;cursor:pointer;font-size:14px}
+.hero{padding:92px 0 80px;text-align:center;background:radial-gradient(circle at 50% 0,#493512 0,transparent 38%)}
+.badge{display:inline-block;border:1px solid #71551f;color:var(--gold2);padding:7px 14px;border-radius:999px;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(38px,7vw,72px);line-height:1.05;max-width:900px;margin:auto}
+.gold{color:var(--gold2)}
+.hero p{max-width:720px;margin:22px auto;color:var(--muted);font-size:18px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 21px;border-radius:10px;font-weight:800;border:1px solid var(--gold);display:inline-block}
+.primary{background:linear-gradient(135deg,#b98320,#ffd76a);color:#111;border:0}
+.secondary{background:#171b23}
+section{padding:72px 0}.section-title{text-align:center;margin-bottom:38px}.section-title h2{font-size:34px}.section-title p{color:var(--muted);margin-top:7px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,#151922,#0f1218);border:1px solid #292e38;border-radius:16px;padding:24px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:#806021}
+.icon{font-size:30px;margin-bottom:10px}.card h3{margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.service{padding:14px;border:1px solid #292e38;border-radius:12px;background:#11151d;font-size:14px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.panel{background:#11151d;border:1px solid #292e38;border-radius:18px;padding:28px}
+ul{list-style:none}.check{margin:12px 0}.check::before{content:"✓";color:var(--gold2);font-weight:bold;margin-right:10px}
+form{display:grid;gap:14px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea,select{width:100%;padding:14px;border-radius:10px;border:1px solid #303642;background:#090c12;color:#fff;outline:none}
+textarea{min-height:130px;resize:vertical}.submit{cursor:pointer}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+footer{border-top:1px solid #292d35;padding:28px 0;color:var(--muted);text-align:center;font-size:13px}
+.float{position:fixed;right:18px;bottom:18px;background:#25d366;color:white;padding:14px 18px;border-radius:999px;font-weight:bold;box-shadow:0 10px 30px #0008}
+@media(max-width:800px){nav{display:none}.menu{display:block}.grid{grid-template-columns:1fr 1fr}.service-grid{grid-template-columns:1fr 1fr}.about,.contact{grid-template-columns:1fr}}
+@media(max-width:520px){.grid,.service-grid,.row{grid-template-columns:1fr}.hero{padding:65px 0}.hero p{font-size:16px}section{padding:52px 0}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="logo" href="#home">AKASH DANGE <span>MULTI SERVICE CENTRE</span></a>
+<button class="menu" onclick="toggleNav()">☰</button>
+<nav id="nav"><a href="#home" data-mr="मुख्यपृष्ठ">Home</a><a href="#services" data-mr="सेवा">Services</a><a href="#about" data-mr="आमच्याबद्दल">About</a><a href="#request" data-mr="विनंती">Request</a><a href="#contact" data-mr="संपर्क">Contact</a><button class="lang" id="langBtn" onclick="toggleLang()">मराठी</button></nav>
+</div></header>
+
+<main id="home">
+<section class="hero"><div class="container">
+<div class="badge">ONE PLACE • MULTIPLE SERVICES</div>
+<h1>AKASH DANGE <span class="gold">MULTI SERVICE CENTRE</span></h1>
+<p data-mr="डिजिटल, सरकारी, प्रवास, प्रिंटिंग आणि ऑनलाईन सेवा — सोप्या, जलद आणि सोयीस्कर.">Digital, Government, Travel, Printing and Online Services — simple, fast and convenient.</p>
+<div class="btns"><a class="btn primary" href="#services" data-mr="सेवा पहा">Explore Services</a><a class="btn secondary" href="#request" data-mr="सेवा विनंती पाठवा">Send Service Request</a></div>
+</div></section>
+
+<section id="services"><div class="container">
+<div class="section-title"><h2 data-mr='आमच्या <span class="gold">सेवा</span>'>Our <span class="gold">Services</span></h2><p data-mr="आमच्या केंद्रावर उपलब्ध लोकप्रिय सेवा">Popular services available at our centre</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🪪</div><h3>Government Documents</h3><p>PAN, Aadhaar, Voter ID, Passport, Driving Licence and more.</p></div>
+<div class="card"><div class="icon">📄</div><h3>Certificates</h3><p>Birth, Death, Marriage, Income, Caste, Domicile and EWS services.</p></div>
+<div class="card"><div class="icon">💼</div><h3>Business Services</h3><p>GST, Udyam, MSME, Shop Act, ITR and digital business assistance.</p></div>
+<div class="card"><div class="icon">🎓</div><h3>Education</h3><p>Scholarship forms, admissions, online applications and job forms.</p></div>
+<div class="card"><div class="icon">✈️</div><h3>Travel Booking</h3><p>Railway, bus, flight and hotel booking assistance.</p></div>
+<div class="card"><div class="icon">🖨️</div><h3>Printing & Design</h3><p>Print, Xerox, scan, lamination, photo print, resume and more.</p></div>
+</div>
+<br>
+<div class="service-grid">
+<div class="service">PAN Card Services</div><div class="service">Aadhaar Services</div><div class="service">Voter ID</div><div class="service">Passport</div>
+<div class="service">Driving Licence</div><div class="service">Vehicle RC</div><div class="service">Ration Card</div><div class="service">Ayushman Card</div>
+<div class="service">e-Shram Card</div><div class="service">PM Kisan</div><div class="service">Scholarship Forms</div><div class="service">Government Job Forms</div>
+<div class="service">GST Registration</div><div class="service">Udyam Registration</div><div class="service">ITR Services</div><div class="service">Digital Signature</div>
+<div class="service">Railway Ticket</div><div class="service">Bus Ticket</div><div class="service">Flight Ticket</div><div class="service">Hotel Booking</div>
+<div class="service">Mobile Recharge</div><div class="service">Bill Payments</div><div class="service">FASTag</div><div class="service">Photo & Xerox</div>
+</div>
+</div></section>
+
+<section id="about"><div class="container about">
+<div><div class="section-title" style="text-align:left"><h2>Why Choose <span class="gold">Us?</span></h2></div>
+<ul><li class="check">Multiple services under one roof</li><li class="check">Simple and customer-friendly process</li><li class="check">Support for online applications and documents</li><li class="check">Mobile-friendly service request system</li></ul></div>
+<div class="panel"><h3>AKASH DANGE MULTI SERVICE CENTRE</h3><p style="color:var(--muted);margin-top:10px">Your convenient destination for digital and online service assistance.</p></div>
+</div></section>
+
+<section id="request"><div class="container">
+<div class="section-title"><h2 data-mr='सेवा <span class="gold">विनंती</span>'>Service <span class="gold">Request</span></h2><p data-mr="फॉर्म भरा आणि तुमची गरज कळवा">Fill the form and submit your requirement</p></div>
+<div class="panel"><form onsubmit="submitRequest(event)">
+<div class="row"><input id="name" required placeholder="Your Name"><input id="mobile" required placeholder="Mobile Number" inputmode="numeric"></div>
+<select id="service" required><option value="">Select Service</option><option>PAN Card</option><option>Aadhaar Service</option><option>Passport</option><option>Driving Licence</option><option>Certificate</option><option>GST / Udyam</option><option>Travel Booking</option><option>Printing / Xerox</option><option>Other</option></select>
+<textarea id="message" placeholder="Write your requirement"></textarea>
+<button class="btn primary submit" type="submit">Submit Request</button>
+</form></div>
+</div></section>
+
+<section id="contact"><div class="container contact">
+<div class="panel"><h2 data-mr='संपर्क <span class="gold">केंद्र</span>'>Contact <span class="gold">Centre</span></h2><p style="color:var(--muted);margin-top:10px">For service enquiries, use the request form or add your official contact details below.</p><p style="margin-top:18px">👤 <strong>Owner:</strong> Akash Dange</p><p style="margin-top:6px">📍 <strong>Address:</strong> Croma Showroom, Near Pathardi Gaon, Nashik 422010</p><p>📞 <strong>Mobile:</strong> <a href="tel:9373523461">9373523461</a></p><p style="margin-top:16px"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Croma+Showroom+Pathardi+Gaon+Nashik+422010" target="_blank" rel="noopener" data-mr="📍 Google Map वर पहा">📍 View on Google Map</a></p></div>
+<div class="panel"><h3 data-mr="कामाची वेळ">Business Hours</h3><p style="color:var(--muted);margin-top:10px">Monday – Sunday</p><p>10:00 AM – 10:00 PM</p><p style="color:var(--muted);margin-top:15px">Hours can be edited anytime in the website code.</p></div>
+</div></section>
+</main>
+
+<footer>© 2026 AKASH DANGE MULTI SERVICE CENTRE. All Rights Reserved.</footer>
+<a class="float" href="#request">💬 Service Request</a>
+
+<script>
+function toggleNav(){const n=document.getElementById('nav');n.style.display=n.style.display==='flex'?'none':'flex';n.style.flexDirection='column';n.style.position='absolute';n.style.right='4%';n.style.top='65px';n.style.background='#0b0e14';n.style.padding='18px';n.style.border='1px solid #292e38';n.style.borderRadius='12px'}
+let mr=false;
+function toggleLang(){mr=!mr;document.querySelectorAll('[data-mr]').forEach(e=>{if(!e.dataset.en)e.dataset.en=e.innerHTML;e.innerHTML=mr?e.dataset.mr:e.dataset.en});document.documentElement.lang=mr?'mr':'en';document.getElementById('langBtn').textContent=mr?'English':'मराठी'}
+function submitRequest(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value;
+ const service=document.getElementById('service').value;
+ const mobile=document.getElementById('mobile').value;
+ const msg=document.getElementById('message').value;
+ const text='Namaste, mala service havi aahe.\nName: '+name+'\nMobile: '+mobile+'\nService: '+service+(msg?'\nDetails: '+msg:'');
+ window.open('https://wa.me/919373523461?text='+encodeURIComponent(text),'_blank');
+}
+</script>
+</body>
+</html>
